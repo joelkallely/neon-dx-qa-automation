@@ -6,7 +6,6 @@ import java.io.FileWriter;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
@@ -15,6 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 
@@ -23,6 +23,11 @@ public class LoginAndLogout extends browserInit
 {
 	
 	ExcelHelper eh = new ExcelHelper();
+	@Before
+	public void beforeAction(){
+		System.out.println("before action");
+	}
+	
 	@Given("^login$")
     public void loginuser() throws InterruptedException {
 		init();

@@ -19,8 +19,9 @@ public class HelloWorld {
 	public static void main(String args[]) throws Exception
 	{
 	
-		setExcelFile("D:\\auto\\auto_selenium\\check\\Excel Files\\productPage.xls","Sheet1");
-		getCell(1,1);
+		System.out.println("hello");
+		//setExcelFile("D:\\auto\\auto_selenium\\check\\Excel Files\\productPage.xls","Sheet1");
+		//getCell(1,1);
 
 	}
 	
