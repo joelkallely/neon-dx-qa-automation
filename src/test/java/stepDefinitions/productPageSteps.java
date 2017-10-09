@@ -28,7 +28,7 @@ public class productPageSteps extends browserInit {
 	WebDriverWait wait = new WebDriverWait(driver, 15);
 	public ExcelHelper eh = new ExcelHelper();
 	
-	@Before
+	//@Before
 	public void beforeAction(){
 		System.out.println("before action");
 	}

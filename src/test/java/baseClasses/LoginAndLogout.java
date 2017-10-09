@@ -14,6 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
@@ -23,9 +24,9 @@ public class LoginAndLogout extends browserInit
 {
 	
 	ExcelHelper eh = new ExcelHelper();
-	@Before
-	public void beforeAction(){
-		System.out.println("before action");
+	@After
+	public void afterAction(){
+		driver.close();
 	}
 	
 	@Given("^login$")
