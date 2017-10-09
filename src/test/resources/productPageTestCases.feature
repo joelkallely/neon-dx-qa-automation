@@ -1,6 +1,6 @@
-#Author: your.email@your.domain.com
-#Keywords Summary :
-#Feature: Offer Page Features
+#Author: Joel Jose
+#Keywords Summary : Product page test cases
+#Feature: Product Page Features
 
 @tag
 Feature: Title of your feature
