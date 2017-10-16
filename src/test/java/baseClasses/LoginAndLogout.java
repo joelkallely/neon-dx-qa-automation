@@ -24,44 +24,18 @@ public class LoginAndLogout extends browserInit
 {
 	
 	ExcelHelper eh = new ExcelHelper();
-	@After
-	public void afterAction(){
-		driver.close();
-	}
+	
 	
 	@Given("^login$")
     public void loginuser() throws InterruptedException {
 		init();
-		 eh.setExcelFile("login");
+		 eh.setExcelFile("login.xls","Sheet1");
 		 int rows = eh.numRows();
 		 System.out.println(rows);
 		 driver.get("http://192.168.150.45/#/login");
     	 driver.findElement(By.xpath("//*[@id='input'and @class='style-scope gold-email-input']")).sendKeys(eh.getCell(1, 0));
 		 driver.findElement(By.xpath("//*[@id='input'and @class='style-scope paper-input']")).sendKeys(eh.getCell(1, 1));
-		 driver.findElement(By.id("loginButton")).click();
-		 // create file named Cookies to store Login Information		
-	        File file = new File("Cookies.data");							
-	        try		
-	        {		
-	            // Delete old file if exists
-				file.delete();		
-	            file.createNewFile();			
-	            FileWriter fileWrite = new FileWriter(file);							
-	            BufferedWriter Bwrite = new BufferedWriter(fileWrite);							
-	            // loop for getting the cookie information 		
-	            for(Cookie ck : driver.manage().getCookies())							
-	            {		
-	                Bwrite.write((ck.getName()+";"+ck.getValue()+";"+ck.getDomain()+";"+ck.getPath()+";"+ck.getExpiry()+";"+ck.isSecure()));																									
-	                Bwrite.newLine();			
-	        }		
-	            Bwrite.flush();			
-	            Bwrite.close();			
-	            fileWrite.close();			
-	        }catch(Exception ex)					
-	        {		
-	            ex.printStackTrace();			
-	        }		
-	    				
+		 driver.findElement(By.id("loginButton")).click();				
      		
 		System.out.println("logged in");
         
@@ -79,7 +53,7 @@ public class LoginAndLogout extends browserInit
 		System.out.println("logged out");
         
     }
-//@BeforeClass
+
 public void LoginWithValidUser(){
     
 	 init();
@@ -95,7 +69,7 @@ public void LoginWithValidUser(){
 	 //driver.findElement(By.id("outLogo")).click();
 }
 
-//@AfterClass
+
 public void LogoutandExitBrowser(){
 	System.out.println("inside logout and exit");
 	WebDriverWait wait = new WebDriverWait(driver, 60);

@@ -28,20 +28,21 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/excel jars/jxl-2.6.6-sources.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/excel jars/poi-3.16-beta1.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/excel jars/poi-examples-3.16-beta1.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/excel jars/poi-excelant-3.16-beta1.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/excel jars/poi-ooxml-3.16-beta1.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/excel jars/poi-ooxml-schemas-3.16-beta1.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/excel jars/poi-scratchpad-3.16-beta1.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/cucumber jars/cucumber-core-1.2.5.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/cucumber jars/cucumber-core-1.2.5-sources.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/cucumber jars/cucumber-html-0.2.6.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/cucumber jars/cucumber-java-1.2.5.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/cucumber jars/cucumber-junit-1.2.5.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/cucumber jars/cucumber-jvm-deps-1.0.5.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/cucumber jars/gherkin-2.12.2.jar"/>
-	<classpathentry kind="lib" path="D:/auto/auto_selenium/cucumber jars/selenium-server-standalone-3.4.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/cucumber jars/cucumber-core-1.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/cucumber jars/cucumber-core-1.2.5-sources.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/cucumber jars/cucumber-html-0.2.6.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/cucumber jars/cucumber-java-1.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/cucumber jars/cucumber-junit-1.2.5.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/cucumber jars/cucumber-jvm-deps-1.0.5.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/cucumber jars/gherkin-2.12.2.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/cucumber jars/selenium-server-standalone-3.4.0.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/excel jars/jxl-2.6.6-sources.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/excel jars/poi-3.16-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/excel jars/poi-examples-3.16-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/excel jars/poi-excelant-3.16-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/excel jars/poi-ooxml-3.16-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/excel jars/poi-ooxml-schemas-3.16-beta1.jar"/>
+	<classpathentry kind="lib" path="D:/auto_selenium/excel jars/poi-scratchpad-3.16-beta1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

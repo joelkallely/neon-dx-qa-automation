@@ -10,6 +10,15 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class CommonSteps extends browserInit {
+	@Then("^navigate to products$")
+	public void naviagte_to_products() throws Exception{
+		driver.findElement(By.xpath("//*[@id='sym1']")).click();
+	}
+	@Then("^navigate to offers$")
+	public void naviagte_to_offers() throws Exception{
+		driver.findElement(By.xpath("//*[@id='sym2']")).click();
+		Thread.sleep(2000);
+	}
 	
 	@When("^click filter button$")
     public void filter() {
