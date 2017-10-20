@@ -24,11 +24,12 @@ import com.steadystate.css.util.ThrowCssExceptionErrorHandler;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import neon.functionality.baseClasses.browserInit;
+import baseClasses.ExcelHelper;
+import baseClasses.browserInit;
 import net.sourceforge.htmlunit.corejs.javascript.ast.ThrowStatement;
 
 public class Offer_catalogue extends browserInit
-{   public excelMaster eM = new excelMaster(); 
+{   public ExcelHelper eM = new ExcelHelper(); 
     public WebDriverWait wait = new WebDriverWait(driver, 15);
     public Actions action = new Actions(driver);
     

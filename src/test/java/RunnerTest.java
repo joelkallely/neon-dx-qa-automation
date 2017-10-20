@@ -6,7 +6,7 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		format = {"pretty" , "html:target/html/" },
-		features = ("src/test/resources"),tags = ("@tag2055")
+		features = ("src/test/resources"),tags = ("@tagjoeltestsuite")
 		)
 public class RunnerTest {
 
