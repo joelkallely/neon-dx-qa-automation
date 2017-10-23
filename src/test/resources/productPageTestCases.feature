@@ -40,14 +40,14 @@ Then navigate to precision marketing
 Then navigate to offer management
 Then verify adding more than 3 benefits for product
 
-@tag6
+@tag1042
 Scenario: Create Product: Verify clicking on the Add button to add benefits NX-1042
 Given login
 Then navigate to precision marketing
 Then navigate to offer management
 Then clicking on the Add button to add benefits for the product
 
-@tag7
+@tag1047
 Scenario: Create Product: Verify adding multiple benefits for the single product NX-1047
 Given login
 Then navigate to precision marketing

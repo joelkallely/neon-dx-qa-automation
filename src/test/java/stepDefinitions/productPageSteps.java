@@ -633,6 +633,7 @@ public class productPageSteps extends browserInit {
 	}
 	@Then("^verify clicking on options icon$")
     public void verify_clicking_options_icon() throws Exception {
+		Exception e = new Exception("options not found in options menu");
 		Random rn = new Random();
 		int  n = rn.nextInt(5000) + 1;
 		Thread.sleep(1000);
@@ -641,7 +642,7 @@ public class productPageSteps extends browserInit {
 		List<WebElement> button2 = driver.findElements(By.xpath("//*[@id='contentWrapper']/div/paper-menu/div/paper-item[2]"));
 		List<WebElement> button3 = driver.findElements(By.xpath("//*[@id='contentWrapper']/div/paper-menu/div/paper-item[3]"));
 		List<WebElement> button4 = driver.findElements(By.xpath("//*[@id='contentWrapper']/div/paper-menu/div/paper-item[4]"));
-		Exception e = new Exception("options not found in options menu");
+		
 		Iterator<WebElement> iter = ele.iterator();
 		Iterator<WebElement> iter1 = button1.iterator();
 		Iterator<WebElement> iter2 = button2.iterator();
