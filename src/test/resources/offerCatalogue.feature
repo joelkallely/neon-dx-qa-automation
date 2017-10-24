@@ -1,8 +1,10 @@
+#Author: nikhil.b@flytxt.com
+
 
 @tagOfferCatalog
 Feature: Offer Catalogue 
 
-@tag1
+@tag1125
 Scenario: Verify Creating Offer Catalogue
   Given login
 	When navigate to precision marketing
@@ -13,7 +15,7 @@ Scenario: Verify Creating Offer Catalogue
   Then Delete Created Offer Catalogue
   Then logout
 	
-@tag2
+@tag1126
 
 Scenario: Verify Canceling Offer Catalogue 
 Given login
@@ -23,7 +25,7 @@ Then Navigate to Offer Catalogue
 Then Cancel the New offer Catalogue
 Then logout
 
-@tag3 
+@tag1146
 
 Scenario: Verify Canceling Selected Offer 
   Given login
@@ -35,7 +37,7 @@ Scenario: Verify Canceling Selected Offer
   Then Delete Created Offer Catalogue
   Then logout
  
-@tag3  
+@tag1145  
 Scenario: Verify Adding Selected Offers
 Given login
 	When navigate to precision marketing
@@ -46,7 +48,7 @@ Given login
   Then Delete Created Offer Catalogue
   Then logout
   
-@tag4
+@tag1139
 Scenario: Verify Selecting Multiple Offers
 Given login
 	When navigate to precision marketing
@@ -57,7 +59,7 @@ Given login
   Then Delete Created Offer Catalogue
   Then logout
  
- @tag5 
+ @tag1138
  Scenario: Search Offers Using Combination of fields
   Given login
 	When navigate to precision marketing
@@ -68,7 +70,7 @@ Given login
   Then Delete Created Offer Catalogue
   Then logout
   
- @tag6
+ @tag1137
  Scenario: Search Offers Using Service leg
   Given login
 	When navigate to precision marketing
@@ -79,7 +81,7 @@ Given login
   Then Delete Created Offer Catalogue
   Then logout
   
-@tag7
+@tag1146
 Scenario: Verify Canceling selected Offers
 Given login
 	When navigate to precision marketing
@@ -90,7 +92,7 @@ Given login
   Then Delete Created Offer Catalogue
   Then logout
   
-@tag8
+@tag1135
 Scenario: Verify Selecting Offers Using Product Name
 Given login
 	When navigate to precision marketing
@@ -101,8 +103,8 @@ Given login
   Then Delete Created Offer Catalogue
   Then logout
   
-@tag9
-Scenario: Verify Added Catalogue
+@tag1128
+Scenario:  Verify the newly added offer catalog in the Offer Catalog screen
 Given login
 	When navigate to precision marketing
 	Then Navigate to Offer Management 
@@ -113,8 +115,8 @@ Given login
   Then Delete Created Offer Catalogue
   Then logout
 
-@tag10
-Scenario: Verify Field validation in Offer Catalogue
+@tag1127
+Scenario: Verify the field validations for the catalogue name and description
 Given login
 	When navigate to precision marketing
 	Then Navigate to Offer Management 
@@ -122,7 +124,7 @@ Given login
   Then Validate Catalogue Name
   Then logout
   
-@tag11
+@tag5984
 Scenario: Verify Deleting Offer from catalogue
 Given login
 	When navigate to precision marketing
@@ -134,8 +136,8 @@ Given login
   Then Delete Created Offer Catalogue
   Then logout
   
-@tag12
-Scenario: Verify Adding Fifty more offers to catalogue
+@tag5985
+Scenario: Verify displaying offers in Offer catalog when more than 50 offers are added 
 Given login
 	When navigate to precision marketing
 	Then Navigate to Offer Management 
@@ -145,7 +147,7 @@ Given login
   Then Delete Created Offer Catalogue
   Then logout
  
-@tag13
+@tag2185
 Scenario: Verify Help Icon in Offer Catalogue Page
 Given login
 	When navigate to precision marketing
@@ -154,7 +156,7 @@ Given login
 	Then Verify Help Of Offer Catalogue
 	Then logout
 	
-@tag14
+@tag2102
 Scenario: verify sql injection in Offer Catalog
 Given login
 Then navigate to precision marketing
@@ -163,7 +165,7 @@ Then Navigate to Offer Catalogue
 Then verify sql injection in offer catalogue
 Then logout
 	
-@tag15
+@tag2074
 Scenario: verify Cross site scripting in Offer Catalog
 Given login
 Then navigate to precision marketing
@@ -172,25 +174,20 @@ Then Navigate to Offer Catalogue
 Then verify Cross site scripting in offer catalogue
 Then logout
 
-@tag16
-Scenario: verify sql injection in Offer Catalog
-Given login
-Then navigate to precision marketing
-Then  Navigate to Offer Management 
-Then Navigate to Offer Catalogue
-Then verify sql injection in offer catalogue
-Then logout
 
-@tag17
-Scenario: verify Cross site scripting in Offer Catalog
+@tag1160
+Scenario: Verify Edit Offer Catalogue
 Given login
-Then navigate to precision marketing
-Then  Navigate to Offer Management 
-Then Navigate to Offer Catalogue
-Then verify Cross site scripting in offer catalogue
-Then logout
+	When navigate to precision marketing
+	Then Navigate to Offer Management 
+	Then Navigate to Offer Catalogue
+  Then Create New Offer Catalogue
+  Then Add offer to Offer Catalogue
+  Then Verify Edit Offer Catalog
+  Then logout
+  
 
-@tag18
+@tag1159
 Scenario: Verify Colapsing Offer in Offer Catalog
 Given login
 	When navigate to precision marketing
