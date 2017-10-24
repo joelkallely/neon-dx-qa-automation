@@ -38,7 +38,7 @@ public class productPageSteps extends browserInit {
 	
 	@Then("^create single product from sheet \"([^\"]*)\"$")
     public void singleProduct(String sheet) throws AWTException, InterruptedException, IOException {
-		eh.setExcelFile("inputData.xls",sheet);
+		eh.setExcelFile("inputData",sheet);
 		Random rn = new Random();
 		int  n = rn.nextInt(5000) + 1;
 		String name = (String) eh.getCell(1, 0);
@@ -70,7 +70,7 @@ public class productPageSteps extends browserInit {
 	
 	@Then("^create new product from sheet \"([^\"]*)\"$")
     public void newProduct(String sheet) throws AWTException, InterruptedException, IOException {
-		eh.setExcelFile("inputData.xls",sheet);
+		eh.setExcelFile("inputData",sheet);
 		//String value = "";
 		int rows = eh.numRows();
 		System.out.println("number of rows:"+rows);
@@ -109,7 +109,7 @@ public class productPageSteps extends browserInit {
 	}
 	@Then("^delete product$")
     public void deleteProduct() throws Exception {
-		eh.setExcelFile("inputData.xls","singleProductPage");
+		eh.setExcelFile("inputData","singleProductPage");
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		Exception e = new Exception("product not deleted");
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='sym1']"))).click();
@@ -467,7 +467,7 @@ public class productPageSteps extends browserInit {
 	}
 	@Then("^scrolling to view the entire product list$")
     public void scrollingInProductGrid() throws Exception {
-		eh.setExcelFile("inputData.xls","productPage");
+		eh.setExcelFile("inputData","productPage");
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='sym1']"))).click();
 		Thread.sleep(2000);
 		Actions clickAction = new Actions(driver);
@@ -491,7 +491,7 @@ public class productPageSteps extends browserInit {
     public void verifyProductsGrid() throws Exception {
 		
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='sym1']"))).click();
-		eh.setExcelFile("inputData.xls","singleProductPage");
+		eh.setExcelFile("inputData","singleProductPage");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@d='M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z']/../../..")).click();
 		driver.findElement(By.xpath("//*[@id='filterForm']/paper-input[1]/paper-input-container/div[1]/../div[2]/div[1]/input[1]")).sendKeys(eh.getCell(1, 0));
@@ -528,7 +528,7 @@ public class productPageSteps extends browserInit {
 	}
 	@Then("^create new segmented product from sheet \"([^\"]*)\"$")
     public void newSegmentedProduct(String sheet) throws AWTException, InterruptedException, IOException {
-		eh.setExcelFile("inputData.xls",sheet);
+		eh.setExcelFile("inputData",sheet);
 		int rows = eh.numRows();
 		System.out.println("number of rows:"+rows);
 		WebDriverWait wait = new WebDriverWait(driver, 2);
@@ -563,7 +563,7 @@ public class productPageSteps extends browserInit {
 	}
 	@Then("^check if offer is shown in view offers$")
     public void check_offer_in_view_offer() throws AWTException, InterruptedException {
-		eh.setExcelFile("inputData.xls","singleProductPage");
+		eh.setExcelFile("inputData","singleProductPage");
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//*[@d='M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z']/../../..")).click();
 		driver.findElement(By.xpath("//*[@id='filterForm']/paper-input[1]/paper-input-container/div[1]/../div[2]/div[1]/input[1]")).sendKeys(eh.getCell(1, 0));
@@ -578,7 +578,7 @@ public class productPageSteps extends browserInit {
 	}
 	@Then("^check duplicate product functionality$")
     public void check_duplicate_product_functionality() throws AWTException, InterruptedException {
-		eh.setExcelFile("inputData.xls","singleProductPage");
+		eh.setExcelFile("inputData","singleProductPage");
 		Random rn = new Random();
 		int  n = rn.nextInt(5000) + 1;
 		driver.findElement(By.xpath("//*[@d='M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z']/../../..")).click();
@@ -600,7 +600,7 @@ public class productPageSteps extends browserInit {
 	}
 	@Then("^check edit product functionality$")
     public void check_edit_product_functionality() throws AWTException, InterruptedException, IOException {
-		eh.setExcelFile("inputData.xls","singleProductPage");
+		eh.setExcelFile("inputData","singleProductPage");
 		Random rn = new Random();
 		int  n = rn.nextInt(5000) + 1;
 		String name = (String) eh.getCell(1, 0);
