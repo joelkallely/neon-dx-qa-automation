@@ -11,7 +11,7 @@ public class browserInit{
 
 	public static void init(){
 	
-	System.setProperty("webdriver.chrome.driver", "D:\\auto\\browsers\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "browser_files\\chromedriver.exe");
 	driver =  new ChromeDriver();
 	driver.manage().window().maximize();  
 	}
