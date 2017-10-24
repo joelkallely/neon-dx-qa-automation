@@ -25,7 +25,8 @@ public class CommonSteps extends browserInit {
 		driver.findElement(By.xpath("//*[@d='M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z']/../../..")).click();
 	}
 	@Then("^navigate to precision marketing$")
-    public void precisionMarketing() {
+    public void precisionMarketing() throws InterruptedException {
+		Thread.sleep(500);
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='outLogo']"))).click();
 	}

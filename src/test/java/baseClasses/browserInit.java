@@ -11,9 +11,9 @@ public class browserInit{
 
 	public static void init(){
 	
-	System.setProperty("webdriver.chrome.driver", "browser_files\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "browser_files\\chromedriver1.exe");
 	driver =  new ChromeDriver();
-	//driver.manage().window().maximize();  
+	driver.manage().window().maximize();  
 	}
 	public static boolean scroll_Page(WebElement webelement, int scrollPoints)
 	{
