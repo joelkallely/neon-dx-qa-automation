@@ -52,7 +52,7 @@ public class Offer_catalogue extends browserInit
    
    public void createNewOfferCatalogue() throws Throwable{
 	   
-	    eM.setExcelFile("Offer_Catalog.xls","Sheet1");
+	    eM.setExcelFile("Offer_Catalog","Sheet1");
 	    Random rn = new Random();
 		int  n = rn.nextInt(5000) + 1;
 		String name = (String) eM.getCell(0, 0);
@@ -375,7 +375,7 @@ public class Offer_catalogue extends browserInit
    @Then("^verify sql injection in offer catalogue$")
    public void verifysqlinjectionOfferCatalog() throws Throwable
    {
-	   eM.setExcelFile("Offer_catalog.xls","Sheet1");
+	   eM.setExcelFile("Offer_catalog","Sheet1");
 	   try{
 	   wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//*[@d='M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z']/../../..")))).click();
 	   	wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath("//form/paper-input/paper-input-container/div[2]/div/input")))).sendKeys(eM.getCell(4, 0));
