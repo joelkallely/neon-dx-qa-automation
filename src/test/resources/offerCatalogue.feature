@@ -176,7 +176,7 @@ Then logout
 
 
 @tag1160
-Scenario: Verify Edit Offer Catalogue
+Scenario: Verify Edit Offer Catalogue 
 Given login
 	When navigate to precision marketing
 	Then Navigate to Offer Management 
