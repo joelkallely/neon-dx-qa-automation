@@ -44,10 +44,9 @@ public class productPageSteps extends browserInit {
 		String name = (String) eh.getCell(1, 0);
 		name =  name.replaceAll("[0-9]", "")+n;
 		name= n+name;
-		System.out.println("before set cell");
 		eh.setCell(1, 0, name);
-		System.out.println("after set cell");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='sym1']"))).click();
+		Thread.sleep(400);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//paper-button[contains(.,'Create New Product')]"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[contains(.,'Product Name')]/following::input[1]"))).sendKeys(eh.getCell(1, 0));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='textarea']"))).sendKeys(eh.getCell(1, 1));
@@ -115,12 +114,16 @@ public class productPageSteps extends browserInit {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		Exception e = new Exception("product not deleted");
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='sym1']"))).click();
-		driver.findElement(By.xpath("//*[@d='M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z']/../../..")).click();
-		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='filterForm']/paper-input[1]/paper-input-container/div[1]/../div[2]/div[1]/input[1]")).sendKeys(eh.getCell(1, 0));
-		driver.findElement(By.xpath("//*[@id='filterDialog']/div/paper-button[3]")).click();
-		driver.findElement(By.xpath("//*[@d='M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z']/../../..")).click();
-		driver.findElement(By.xpath("//*[@id='contentWrapper']/div/paper-menu/div/paper-item[2]")).click();
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@d='M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z']/../../.."))).click();
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='filterForm']/paper-input[1]/paper-input-container/div[1]/../div[2]/div[1]/input[1]"))).sendKeys(eh.getCell(1, 0));
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='filterDialog']/div/paper-button[3]"))).click();
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@d='M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z']/../../.."))).click();
+		Thread.sleep(2000);
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='contentWrapper']/div/paper-menu/div/paper-item[2]"))).click();
 		Thread.sleep(2000);
 		try{
 			driver.findElement(By.xpath("//span[contains(.,'"+eh.getCell(1, 0)+"')]/../../data-table-cell[3][contains(.,'"+eh.getCell(1, 8)+"')]/../data-table-cell[2][contains(.,'"+eh.getCell(1, 2)+"')]/../data-table-cell[4][contains(.,'"+eh.getCell(1, 11)+"')]/../data-table-cell[5][contains(.,'"+eh.getCell(1, 4)+"')]/../data-table-cell[6][contains(.,'"+eh.getCell(1, 3)+"')]/../data-table-cell[7][contains(.,'"+eh.getCell(1, 7)+"')]"));

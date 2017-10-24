@@ -13,7 +13,7 @@ public class browserInit{
 	
 	System.setProperty("webdriver.chrome.driver", "browser_files\\chromedriver.exe");
 	driver =  new ChromeDriver();
-	//driver.manage().window().maximize();  
+	driver.manage().window().maximize();  
 	}
 	public static boolean scroll_Page(WebElement webelement, int scrollPoints)
 	{
