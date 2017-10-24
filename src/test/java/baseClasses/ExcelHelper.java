@@ -5,14 +5,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-import org.apache.poi.hssf.usermodel.HSSFCell;
-import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
-import org.apache.poi.ss.usermodel.Workbook;
 
 public class ExcelHelper {
 Sheet sh = null;
@@ -20,16 +16,12 @@ FileInputStream inputFile = null;
 HSSFWorkbook workbook = null;
 String file = "";	
 	
-    public void setExcelFile(String path, String sheet)
+    public void setExcelFile(String filename, String sheet)
     {
-    	
-		System.out.println(path);
-		file="D:\\GIT Project\\selenium.automation\\ExcelFiles\\"+path;
+    
 
 		try {
-			inputFile = new FileInputStream(new File(new File(".").getCanonicalPath()+"\\ExcelFiles\\"+path));
-			//inputFile = new FileInputStream();
-			workbook = new HSSFWorkbook(inputFile);
+			workbook = new HSSFWorkbook(new FileInputStream(new File("ExcelFiles\\"+filename+".xls")));
 
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
