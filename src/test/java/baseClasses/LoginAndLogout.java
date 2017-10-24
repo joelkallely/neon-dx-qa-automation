@@ -45,12 +45,13 @@ public class LoginAndLogout extends browserInit
 		
 		System.out.println("inside logout and exit");
 		WebDriverWait wait = new WebDriverWait(driver, 60);
-		 //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@class='dropdown-trigger style-scope notification-panel x-scope paper-icon-button-0']"))).click();
-		 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='trigger']/paper-icon-button"))).click();
-		 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='contentWrapper']/div/paper-menu/div/paper-item"))).click();
-
+		 driver.findElement(By.xpath("//*[@id='topBar']/a/img")).click();
+			driver.findElement(By.xpath("//div[5]/paper-menu-button/div/paper-icon-button/iron-icon")).click();
+			driver.findElement(By.xpath("//div/paper-item")).click();
+			System.out.println("logged out");
+			driver.close();
 		 
-		System.out.println("logged out");
+		
         
     }
 
