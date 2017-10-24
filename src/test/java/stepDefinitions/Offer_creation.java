@@ -28,7 +28,7 @@ public class Offer_creation extends browserInit
 		Thread.sleep(3000);
 	}
 	
-	@Then("^Create_new_Offer$")
+	@Then("^create new offer for product$")
 	public void create_new_Offer() throws Throwable 
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 20);

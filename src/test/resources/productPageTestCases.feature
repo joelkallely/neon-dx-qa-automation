@@ -146,7 +146,7 @@ Then navigate to offer management
 Then create single product from sheet "singleProductPage"
 Then navigate to offer management
 Then navigate to offers
-Then Create_new_Offer
+Then create new offer for product
 Then navigate to offer management
 Then navigate to products
 Then check if offer is shown in view offers
