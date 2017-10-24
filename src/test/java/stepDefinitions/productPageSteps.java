@@ -465,6 +465,7 @@ public class productPageSteps extends browserInit {
 			throw e;
 		}
 	}
+	//jgu
 	@Then("^scrolling to view the entire product list$")
     public void scrollingInProductGrid() throws Exception {
 		eh.setExcelFile("inputData","productPage");
