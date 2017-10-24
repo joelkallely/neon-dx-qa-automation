@@ -284,8 +284,9 @@ public class productPageSteps extends browserInit {
     public void saveProductWithMultipleBenefits() throws AWTException, InterruptedException {
 		Random rand = new Random();
 
-		int  n = rand.nextInt(50) + 1;
+		int  n = rand.nextInt(5000) + 1;
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='sym1']"))).click();
+		Thread.sleep(1000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//paper-button[contains(.,'Create New Product')]"))).click();
 		driver.findElement(By.xpath("//label[contains(.,'Product Name')]/following::input[1]")).sendKeys("multipleBenefit_Check"+n);	
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='textarea']"))).sendKeys("Checking cross site scripting in creation of new product under CLV Max");
