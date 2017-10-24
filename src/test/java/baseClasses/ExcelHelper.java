@@ -22,7 +22,7 @@ String file = "";
 
 		try {
 			workbook = new HSSFWorkbook(new FileInputStream(new File("ExcelFiles\\"+filename+".xls")));
-
+			file = "ExcelFiles\\"+filename+".xls";
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -33,7 +33,7 @@ String file = "";
     }
     public void setCell(int r,int c,String val) throws IOException{
     	Row row = sh.getRow(r);
-        Cell cell = row.getCell(c);
+        Cell cell = row.getCell(c);       
         cell.setCellType(Cell.CELL_TYPE_STRING);
         cell.setCellValue(val);
         FileOutputStream outFile =new FileOutputStream(new File(file));  //Creating new file

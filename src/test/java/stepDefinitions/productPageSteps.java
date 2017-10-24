@@ -44,7 +44,9 @@ public class productPageSteps extends browserInit {
 		String name = (String) eh.getCell(1, 0);
 		name =  name.replaceAll("[0-9]", "")+n;
 		name= n+name;
+		System.out.println("before set cell");
 		eh.setCell(1, 0, name);
+		System.out.println("after set cell");
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='sym1']"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//paper-button[contains(.,'Create New Product')]"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[contains(.,'Product Name')]/following::input[1]"))).sendKeys(eh.getCell(1, 0));

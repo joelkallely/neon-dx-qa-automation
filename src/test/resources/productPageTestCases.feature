@@ -16,7 +16,6 @@ Scenario: Products Grid: Verify scrolling functionality to view the product at t
 Given login
 Then navigate to precision marketing
 Then navigate to offer management
-#Then navigate to products
 Then create single product from sheet "singleProductPage"
 Then scrolling to view the entire product list
 @tag1036
