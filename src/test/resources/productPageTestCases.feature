@@ -155,7 +155,6 @@ Scenario: Products Grid: Verify the duplicate option of the product added NX-102
 Given login
 Then navigate to precision marketing
 Then navigate to offer management
-#Then navigate to products
 Then create single product from sheet "singleProductPage"
 Then check duplicate product functionality
 

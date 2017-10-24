@@ -63,7 +63,7 @@ public class productPageSteps extends browserInit {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//paper-item[contains(.,'"+eh.getCell(1, 9)+"')]"))).click();
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//label[contains(.,'Value')]/following::input[1]"))).sendKeys(eh.getCell(1, 10));
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='modal']/div[3]/paper-button[contains(.,'Save')]"))).click();
-		Thread.sleep(200);
+		Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='toast']/span[contains(.,'Product saved successfully.')]"))).click();
 
 	

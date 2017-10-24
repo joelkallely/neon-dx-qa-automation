@@ -35,7 +35,7 @@ public class Offer_creation extends browserInit
 		Actions actions = new Actions(driver);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//paper-button[contains(.,'Create New Offer')]"))).click();
 		Thread.sleep(2000);
-		eh.setExcelFile("inputData.xls","singleProductPage");
+		eh.setExcelFile("inputData","singleProductPage");
 		Random rn = new Random();
 		int  n = rn.nextInt(5000) + 1;
 		String name = (String) eh.getCell(1, 12);
