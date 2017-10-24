@@ -29,7 +29,7 @@ public class LoginAndLogout extends browserInit
 	@Given("^login$")
     public void loginuser() throws InterruptedException {
 		init();
-		 eh.setExcelFile("login.xls","Sheet1");
+		 eh.setExcelFile("login","Sheet1");
 		 int rows = eh.numRows();
 		 System.out.println(rows);
 		 driver.get("http://192.168.150.45/#/login");
