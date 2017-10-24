@@ -114,15 +114,10 @@ public class productPageSteps extends browserInit {
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 		Exception e = new Exception("product not deleted");
 		//wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='sym1']"))).click();
-		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@d='M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z']/../../.."))).click();
-		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='filterForm']/paper-input[1]/paper-input-container/div[1]/../div[2]/div[1]/input[1]"))).sendKeys(eh.getCell(1, 0));
-		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='filterDialog']/div/paper-button[3]"))).click();
-		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@d='M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z']/../../.."))).click();
-		Thread.sleep(2000);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='contentWrapper']/div/paper-menu/div/paper-item[2]"))).click();
 		Thread.sleep(2000);
 		try{
