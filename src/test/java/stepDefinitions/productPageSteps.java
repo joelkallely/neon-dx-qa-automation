@@ -660,13 +660,13 @@ public class productPageSteps extends browserInit {
 		    we.click();
 		    Thread.sleep(1000);
 		    if( we1.isDisplayed()  && we2.isDisplayed() && we3.isDisplayed() && we4.isDisplayed()){
-		    	System.out.println("options present");
+		    	
 		    }
 		    else
 		    	 throw e;
-		    System.out.println("click outside");
+		    
 		    driver.findElement(By.xpath(".//*[@id='item"+i+"']/div[1]/data-table-cell[3]")).click();
-		    System.out.println("clicked outside");
+		  
 		}
 	}
 	@Then("^check script in product name field \"([^\"]*)\"$")
