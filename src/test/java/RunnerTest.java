@@ -21,7 +21,7 @@ import cucumber.api.junit.Cucumber;
         pdfPageSize = "A4 Landscape",
         toPDF = true,
         outputFolder = "target/81",
-        retryCount = 3)
+        retryCount = 1)
 @CucumberOptions(
         features = { "src/test/resources" },
         tags = { "@tag1053,@tag1014" },
