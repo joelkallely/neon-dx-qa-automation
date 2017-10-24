@@ -54,8 +54,6 @@ String file = "";
 		int n = (int)num;
 		CellGetContent = String.valueOf(n);
 	}
-    System.out.println(CellGetContent);
-	//getCell(0,0).getContents();
     return CellGetContent;
     }
     public int numRows()
